@@ -16,6 +16,8 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'Chi Sono', href: '#about' },
+    { name: 'Risultati', href: '#results' },
+    { name: 'Studio', href: '#gym' },
     { name: 'Prezzi', href: '#pricing' },
     { name: 'Contatti', href: '#contact' },
   ];
@@ -51,7 +53,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -70,7 +72,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-gold-400 transition-colors"
@@ -82,7 +84,7 @@ export const Navbar: React.FC = () => {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`md:hidden fixed inset-0 bg-dark-900 z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} pt-24 px-6`}>
+      <div className={`lg:hidden fixed inset-0 bg-dark-900 z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} pt-24 px-6`}>
         <div className="flex flex-col space-y-6 text-center">
           {navLinks.map((link) => (
             <a

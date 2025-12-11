@@ -2,6 +2,9 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
+import { Certifications } from './components/Certifications';
+import { Results } from './components/Results';
+import { Gym } from './components/Gym';
 import { Pricing } from './components/Pricing';
 import { Contact } from './components/Contact';
 
@@ -12,6 +15,9 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Certifications />
+        <Results />
+        <Gym />
         <Pricing />
         <Contact />
       </main>
